@@ -1,0 +1,135 @@
+﻿<!DOCTYPE HTML>
+<html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<title>css3太阳系旋转-css3实例站</title>
+<meta name="keywords" content="-webkit-keyframes -webkit-animation css3实例">
+<meta name="description" content="对于设计人员和开发人员来说，CSS一直是web设计过程中重要的一部分，随着CSS3的出现以及越来越多的浏览器对它的支持，设计师们有了 更多的选择。用纯CSS也可以实现各种各样很酷的效果了，甚至是动画。虽然有些效果不能跨浏览器运行，有些只是展示并没什么实际用途，但仅用CSS实现出的这些效果似乎没什么可以挑剔的。..所以本站为css3爱好者提供css3实例！">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="generator" content="Editplus ">
+<meta name="author" content="Author：张会杰,QQ：871925574">
+<meta name="robots" content="ALL">
+<meta name="copyright" content="张会杰-css3实例站www.css3train.com"> 
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #080e24 repeat;
+    color: #626668;
+}
+
+
+section {
+    display: block;
+    position: relative;
+}
+
+
+ul.solarsystem{position:relative;height:640px;list-style:none;overflow:hidden;
+        -webkit-transition:all 0.09s ease-in;
+}
+ul.solarsystem li{text-indent:-9999px;display:block;position:absolute;border:2px solid #394057;}
+ul.solarsystem li span{display:block;position:absolute;width:10px;height:10px;
+    border-radius:5px;
+}
+ul.solarsystem li:hover{border-color:#aa4200;}
+ul.solarsystem li:hover{-webkit-transform:scale(1.3);}
+ul.solarsystem li.sun{width:40px;height:40px;background: #fc3;border:none;z-index:100;
+    border-radius:20px;
+    background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.22, rgb(204,153,0)),color-stop(1, rgb(255,219,112)));
+    -webkit-transform:translate(462px,302px);
+    box-shadow: 0 0 50px #c90;
+    -webkit-transition:all 0.2s ease-in;
+}
+ul.solarsystem li.sun span{width:60px;height:60px;border-radius:30px;}
+ul.solarsystem li.mercury{width:100px;height:100px;top:270px;left:430px;z-index:99;
+    border-radius:52px;
+    -webkit-transform:translate(462px,302px);
+}
+ul.solarsystem li.mercury span{background:#b6bac5;top:10px;left:10px;}
+ul.solarsystem li.venus{width:160px;height:160px;top:240px;left:400px;z-index:98;
+    border-radius:82px;
+}
+ul.solarsystem li.venus span{background:#bf8639;top:118px;left:5px;}
+ul.solarsystem li.earth{width:220px;height:220px;top:210px;left:370px;z-index:97;
+    border-radius: 112px;
+}
+ul.solarsystem li.earth span{background:#06c;top:56px;left:5px;}
+ul.solarsystem li.earth span.moon{width: 4px;height: 4px;background:#ccc;top:12px;left:12px;
+    border-radius: 2px;
+}
+ul.solarsystem li.mars{width:280px;height:280px;top:180px;left:340px;z-index:96;
+    border-radius: 142px;
+}
+ul.solarsystem li.mars span{background:#aa4200;top:0px;left:175px;}
+ul.solarsystem li.asteroids_meteorids{top:155px;left:315px;z-index:1;width: 330px;height: 330px;
+    border-radius: 165px;
+    border:none;
+}
+ul.solarsystem li.jupiter{width:340px;height:340px;top:150px;left:310px;z-index:95;
+    border-radius:172px;
+}
+ul.solarsystem li.jupiter span{background:#e0ae6f;top:67px;left:24px;}
+ul.solarsystem li.saturn {width:400px;height:400px;top:120px;left:280px;z-index:94;
+    border-radius:202px;
+}
+ul.solarsystem li.saturn span {background:#dfd3a9;top:24px;left:300px;}
+ul.solarsystem li.saturn span.ring {width:12px;height:12px;background:none;border:2px solid #5a4e34;left:-3px;top:-3px;
+    border-radius: 8px;
+    -webkit-transform:skewY(50deg);
+}
+ul.solarsystem li.uranus{width:460px;height:460px;top:90px;left:250px;z-index:93;
+    border-radius: 232px;
+}
+ul.solarsystem li.uranus span{background:#82b3d1;top:7px;left:300px;}
+ul.solarsystem li.neptune{width:520px;height:520px;top:60px;left:220px;z-index:92;
+    border-radius:262px;
+}
+ul.solarsystem li.neptune span{background: #77c2ec;top: 0px;left: 200px;}
+ul.solarsystem li.pluto {width:580px;height:580px;top:30px;left:190px;z-index:91;
+    border-radius:292px;
+}
+ul.solarsystem li.pluto span{background:#7c6a5c;top:79px;left:79px;}
+
+/* CSS3 Animations */
+ul.solarsystem li.mercury {-webkit-animation : orbit 5s infinite linear;}
+ul.solarsystem li.venus {-webkit-animation : orbit 8s infinite linear;}
+ul.solarsystem li.earth {-webkit-animation : orbit 12s infinite linear;}
+ul.solarsystem li.earth span {-webkit-animation:moon 2s infinite linear;}
+ul.solarsystem li.mars {-webkit-animation : orbit 20s infinite linear;}
+ul.solarsystem li.asteroids_meteorids {-webkit-animation : orbit 50s infinite linear;}
+ul.solarsystem li.jupiter {-webkit-animation : orbit 30s infinite linear;}
+ul.solarsystem li.saturn {-webkit-animation : orbit 60s infinite linear;}
+ul.solarsystem li.uranus {-webkit-animation : orbit 70s infinite linear;}
+ul.solarsystem li.neptune {-webkit-animation : orbit 100s infinite linear;}
+ul.solarsystem li.pluto {-webkit-animation : orbit 120s infinite linear;}
+
+@-webkit-keyframes orbit { from {-webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+@-webkit-keyframes moon { from {-webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+
+</style>
+</head>
+<body>
+<section>
+  <ul class="solarsystem">
+    <li class="sun"><span>太阳</span></li>
+    <li class="mercury"><span>水星</span></li>
+    <li class="venus"><span>金星</span></li>
+    <li class="earth"><span>地球<span class="moon"> & 月球</span></span></li>
+    <li class="mars"><span>火星</span></li>
+    <li class="asteroids_meteorids"><span>小行星 & Meteorids</span></li>
+    <li class="jupiter"><span>木星</span></li>
+    <li class="saturn"><span>土星 & <span class="ring">Ring</span></span></li>
+    <li class="uranus"><span>天王星</span></li>
+    <li class="neptune"><span>海王星</span></li>
+    <li class="pluto"><span>冥王星</span></li>
+  </ul>
+</section>
+
+</body>
+</html>
