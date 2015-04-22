@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test mobile screen bar</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style>
+	  body {padding:0;margin: 0; text-align: center;}
+
+	</style>
+	<script type="text/javascript" src="../scripts/jquery-1.11.1.js">  </script>
+</head>
+<body>
+
+  <div id="dvContext" style="background:blue;width:200px;margin:100px auto;">contextmunu right:right click me</div>
+
+  <script type="text/javascript">
+  
+    $("#dvContext").bind("mousedown",function($event)
+	 {
+		if($event.which="3")
+		{
+			console.log("onmousedown:right mouse key");
+		}
+	 
+	 });
+  
+     $("#dvContext").bind("mouseup",function($event)
+	 {
+		if($event.which="3")
+		{
+			console.log("onmouseup:right mouse key");
+		}
+	 
+	 });
+	 
+	 $("#dvContext").bind("contextmenu",function($event)
+	 {
+		console.log("oncontextmemu");
+		$event.preventDefault();
+	 });
+  </script>
+</body>
+</html>

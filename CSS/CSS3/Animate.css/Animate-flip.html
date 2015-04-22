@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Animate.css</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, minimal-ui">
+  <style type="text/css">
+
+      html {
+          font: 100%/1.5 "Roboto", Verdana, sans-serif;
+          color: #3d464d;
+          background-color: #fff;
+          -webkit-font-smoothing: antialiased;
+          width: 100%;
+          overflow: hidden-x;
+          text-align: center;
+      }
+
+      html:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: -0.25em;
+      }
+  
+     :before, :after
+     {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+      .site__title
+      {
+          color: #f35626;
+          background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+
+
+      .island
+      {
+          padding: 1.5rem;
+      }
+
+      .wrap
+      {
+          max-width: 38rem;
+          margin: 0 auto;
+      }
+
+      input, select, button, textarea
+      {
+        -webkit-appearance: none;
+         -moz-appearance: none;
+          appearance: none;
+
+        font: inherit;
+        color: inherit;
+      }
+
+
+      .mega {
+          font-size: 6rem;
+          line-height: 1;
+      }
+
+.butt, .input
+{
+  padding: .75rem;
+  margin: .375rem;
+
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+  .butt:focus, .input:focus
+  {
+    outline: none;
+  }
+  
+  
+  h1, .alpha {
+  margin-bottom: 1.5rem;
+
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+h2, .beta {
+  margin-bottom: .75rem;
+
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+     .animated 
+	 {
+		 -webkit-animation-duration: 2s;
+		 animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	 }
+
+@-webkit-keyframes flip 
+{
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+} 
+
+/*@keyframes flip {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -ms-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -ms-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    -ms-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    -ms-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+} */
+
+.animated.flip 
+{
+  -webkit-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
+
+  </style>
+  <!-- <link rel="stylesheet" rel="stylesheet"  href="style.css"> -->
+</head>
+<body>
+<header class="site__header island">
+  <div class="wrap">
+    <span id="animationSandbox" style="display: block;
+    transform:perspective(400px)  translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg) ;"
+          class="">
+        <h1 class="site__title mega">Animate.css</h1></span>
+        <span class="beta subhead">Just-add-water CSS animations</span>
+  </div>
+</header><!-- /.site__header -->
+  <div class="wrap">
+    <form> 
+      <button class="butt js--triggerAnimation">Animate it</button>
+    </form>
+    <hr>
+  </div>
+
+<script src="./jquery-1.10.2.min.js"></script>
+<script>
+  function testAnim(x) 
+  {
+    $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass();
+    });
+  };
+
+  $(document).ready(function(){
+    $('.js--triggerAnimation').click(function(e)
+	{
+      e.preventDefault();
+      //var anim = $('.js--animations').val();
+      testAnim("flip");
+    });
+
+    $('.js--animations').change(function()
+	{
+      var anim = $(this).val();
+      testAnim(anim);
+    });
+  });
+
+</script>
+
+
+
+</body></html>

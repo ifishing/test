@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Test mobile screen bar</title>
+    <title>Test float an BFC</title>
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -22,6 +22,12 @@
 .blue {background: #00f;}
 	
 	</style>
+	<script type="text/css">
+	   
+	    var s="<\/script>";
+		console.log(s);
+	
+	</script>
 </head>
 <body>
 
@@ -39,6 +45,20 @@
     <div class="middle-box red">non-clear</div>
 </div>
 
-
+<div style="background:silver;width:500px;">
+   <div style="float:left;width:160px;background:red;">
+      float left
+   </div>
+   <div style="background:blue;overflow:hidden;width:200px">
+      non float
+      习近平：李光耀逝世为国际损失<br/>
+李克强、张德江、张高丽致唁电 各国政要致哀<br/>
+李显龙电视讲话数度哽咽(图) 独家视频：李光耀生平<br/>
+李光耀与五代中国领导人的交往(图) 双面李光耀
+   </div>
+</div>
+<div style="float:left;width:60px;background:orange;">
+       float left
+</div>
 </body>
 </html>

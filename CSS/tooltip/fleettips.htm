@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link href="" rel="stylesheet">
+<style type="text/css">
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	padding: 10px;
+}
+
+.toutiao-ui-tooltip 
+{
+	position: absolute;
+	display:  block;
+	margin:   0;
+	opacity: 0.6;
+	filter: alpha(opacity=1);
+	z-index: 1070;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.4;
+	visibility: visible;
+	padding:5px;
+}
+
+.toutiao-ui-tooltip .tooltip-arrow {
+   position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.toutiao-ui-tooltip .tooltip-left-arrow
+{
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000;
+}
+
+.toutiao-ui-tooltip .tooltip-right-arrow
+{
+top: 50%;
+left: 0;
+margin-top: -5px;
+border-width: 5px 5px 5px 0;
+border-right-color: #000;
+}
+
+.toutiao-ui-tooltip .tooltip-top-arrow
+{
+ bottom: 0;
+left: 50%;
+margin-left: -5px;
+border-width: 5px 5px 0;
+border-top-color: #000;
+}
+
+.toutiao-ui-tooltip .tooltip-bottom-arrow
+{
+top: 0;
+left: 50%;
+margin-left: -5px;
+border-width: 0 5px 5px;
+border-bottom-color: #000;
+}
+
+.toutiao-ui-tooltip .tooltip-inner
+{
+  min-width:50px;
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 4px;
+}
+</style>
+</head>
+<body>
+  
+<div style="margin:20px 50px;">
+  <div class="toutiao-ui-tooltip">
+      <div class="tooltip-arrow tooltip-left-arrow"></div>
+	  <div class="tooltip-arrow tooltip-right-arrow"></div>
+	  <div class="tooltip-arrow tooltip-top-arrow"></div>
+	  <div class="tooltip-arrow tooltip-bottom-arrow"></div>
+      <div class="tooltip-inner">
+        Tooltip on the left
+		 Tooltip on the left
+		  Tooltip on the left
+		   Tooltip on the left
+		    Tooltip on the left
+			 Tooltip on the left
+			  Tooltip on the left
+			   Tooltip on the left
+			    Tooltip on the left
+      </div>
+  </div>
+
+</div>
+
+</body>
+</html>
