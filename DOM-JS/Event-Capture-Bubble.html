@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://developer.mozilla.org/samples/domref/mousecapture.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Event capture and bubble test</title>
+  <style type="text/css">
+    #dv1
+	{
+		background:lightblue;
+		width:400px;
+		height:400px;
+		position:absolute;
+		top:100px;
+		left:100px;
+		
+	}
+	
+	#dv2
+	{
+		background:green;
+		position:absolute;
+		margin:auto;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		height:200px;
+		width:200px;
+	}
+	
+	#dv3
+	{
+		background:yellow;
+		position:absolute;
+		margin:auto;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		height:100px;
+		width:100px;
+	}
+  </style>
+  
+  <script type="text/javascript">
+    function init() 
+	{
+		var dv1 = document.getElementById("dv1");
+		var dv2=document.getElementById("dv2");
+		var dv3=document.getElementById("dv3");
+	  
+		dv1.addEventListener("click", function(event)
+		{
+			console.log("click triggered in dv1, event capture stage");
+			event.stopPropagation();
+		}
+		, true);
+	  
+		dv1.addEventListener("click", function(event)
+		{
+			console.log("click triggered in dv1, event bubble stage");
+		}
+		, false);
+	  
+	  
+		dv2.addEventListener("click", function(event)
+		{
+			console.log("click triggered in dv2, event capture stage");
+			event.stopPropagation();
+		}
+		,true);
+      
+		dv2.addEventListener("click", function(event)
+		{
+			console.log("click triggered in dv2, event bubble stage");
+		}
+		,false);
+		
+		dv3.addEventListener("click", function(event)
+		{
+			console.log("click triggered in dv3, event capture stage");
+			event.stopPropagation();
+		}
+		,true);
+      
+		dv3.addEventListener("click", function(event)
+		{
+			console.log("click triggered in dv3, event bubble stage");
+			event.stopPropagation();
+		}
+		,false);
+		
+		dv3.onclick=function()
+		{
+			console.log("click triggered in dv3, event self process stage");
+		}
+    }
+    
+  
+  </script>
+</head>
+<body onload="init()">
+  
+  <div id="dv1" >
+     dv1
+     <div id="dv2">
+		dv2
+		<div id="dv3">
+			dv3
+		</div>
+	 </div>
+  </div>
+  
+</body>
+</html>
